@@ -26,7 +26,7 @@
 このリポジトリをダウンロードまたはクローンします。
 
 ```bash
-git clone https://github.com/your-username/note-draft-generator.git
+git clone https://github.com/sayasaya8039/note_Draft_Generator.git
 ```
 
 または、GitHubから「Code」→「Download ZIP」でダウンロードし、解凍してください。
