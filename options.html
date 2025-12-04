@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>note Draft 設定</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 20px; max-width: 500px; }
+    h1 { font-size: 18px; margin-bottom: 16px; }
+    h2 { font-size: 14px; margin: 20px 0 8px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+    .status-box { padding: 12px; border-radius: 6px; margin-bottom: 16px; }
+    .status-ok { background: #d4edda; color: #155724; }
+    .status-ng { background: #fff3cd; color: #856404; }
+    .api-section { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 4px; font-weight: bold; }
+    input { padding: 6px; width: 100%; box-sizing: border-box; }
+    button { padding: 8px 20px; margin-top: 16px; cursor: pointer; }
+    #msg { margin-top: 8px; color: #28a745; }
+    .hint { font-size: 12px; color: #666; margin-top: 4px; }
+    .priority { font-size: 12px; color: #666; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <h1>note Draft Generator 設定</h1>
+
+  <div id="aiStatus" class="status-box">
+    AI状態を確認中...
+  </div>
+
+  <p class="priority">
+    優先順位: Chrome AI → Gemini API → OpenAI API<br>
+    （上が使えない場合、次を使用します）
+  </p>
+
+  <h2>Gemini API（推奨・無料枠あり）</h2>
+  <div class="api-section">
+    <label for="geminiKey">Gemini APIキー：</label>
+    <input type="password" id="geminiKey">
+    <p class="hint">
+      <a href="https://aistudio.google.com/apikey" target="_blank">Google AI Studio</a>
+      で無料で取得できます
+    </p>
+  </div>
+
+  <h2>OpenAI API</h2>
+  <div class="api-section">
+    <label for="openaiKey">OpenAI APIキー：</label>
+    <input type="password" id="openaiKey">
+    <p class="hint">有料（クレジット購入が必要）</p>
+  </div>
+
+  <button id="save">保存</button>
+  <div id="msg"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

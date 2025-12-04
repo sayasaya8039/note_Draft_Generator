@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "note Draft Generator",
+  "version": "0.1.0",
+  "description": "選択テキストからnoteの記事タイトル＆見出し案をAIで生成する拡張機能。",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
